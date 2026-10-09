@@ -1,5 +1,7 @@
 torch
 mlflow
 scikit-learn
+scipy
+pandas
 matplotlib
 numpy

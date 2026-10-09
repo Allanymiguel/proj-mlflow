@@ -219,4 +219,12 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
+# MLflow / projeto
+venv/
+mlruns/
 experiments/mlruns/
+experiments/mlflow.db
+mlflow.db
+mlartifacts/
+__pycache__/
+*.pyc
