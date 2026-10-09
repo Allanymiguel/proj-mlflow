@@ -1,5 +1,3 @@
-"""Funções auxiliares: reprodutibilidade, dispositivo, dados, métricas e gráficos."""
-
 import random
 
 import matplotlib

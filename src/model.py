@@ -1,13 +1,8 @@
-"""Definição do modelo MLP (Multi-Layer Perceptron) em PyTorch."""
-
 import torch.nn as nn
 
 
 class MLP(nn.Module):
-    """MLP configurável para classificação.
-
-    Args:
-        input_dim: número de features de entrada.
+    """input_dim: número de features de entrada.
         hidden_dims: lista com o tamanho de cada camada oculta (ex.: [64, 32]).
         num_classes: número de classes de saída.
         dropout: probabilidade de dropout aplicada após cada ReLU (0 desativa).

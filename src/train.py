@@ -1,5 +1,3 @@
-"""Funções de treino, validação e teste do modelo."""
-
 import numpy as np
 import torch
 
