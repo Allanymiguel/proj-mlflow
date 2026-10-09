@@ -137,6 +137,14 @@ def run_experiment(config, splits, device):
             mlflow.log_metric("val_loss", val_loss, step=epoch)
             mlflow.log_metric("val_acc", val_acc, step=epoch)
 
+            # --- Estatísticas dos pesos de cada camada ---
+            for name, param in model.named_parameters():
+                if "weight" in name:
+                    mlflow.log_metric(f"{name}_mean", param.data.mean().item(), step=epoch)
+                    mlflow.log_metric(f"{name}_std", param.data.std().item(), step=epoch)
+                    mlflow.log_metric(f"{name}_min", param.data.min().item(), step=epoch)
+                    mlflow.log_metric(f"{name}_max", param.data.max().item(), step=epoch)
+
             if epoch == 1 or epoch % 10 == 0:
                 print(
                     f"  Época {epoch:3d}/{config['epochs']} | "
